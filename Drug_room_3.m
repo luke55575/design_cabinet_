@@ -1,7 +1,7 @@
-function A=Drug_room_3(data)
-%data�ĵ�һ�У���Ӧ��ҩ�۸߶�
-%data�ĵڶ��У������ܿ���
-%data�ĵ����У���Ӧ�������
+function A=Drug_room_3(data)%data
+% 의 첫 번째 열은 약물 저장 탱크의 높이에 해당합니다.
+%데이터의 두 번째 열, 필요한 총 너비
+%data의 세 번째 열은 파티션의 너비에 해당합니다.
 B=cumsum(data(:,2));
 M=0;
 i=1;
