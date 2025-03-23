@@ -18,9 +18,8 @@ for i=1:n
         k=k+1;
     end
 end
-%对某一影响后续计算的特殊值进行处理，鉴于算法的优化，故不使用冗余的循环
 B(B==2115)=0;
-q=find(B==max(B));%q是B中最大值的位置
+q=find(B==max(B));
 if q==1
     a1=12;
 else
@@ -39,12 +38,11 @@ s1=(find(data(:,1)==a1));
 s2=(find(data(:,1)==a2));
 s1=s1(1,1);
 s2=s2(length(s2),1);
-%s1,s2为data中的位置（起初和末尾）
-%sum1 分割区间中所有药品的数量
+%s1,s2-data
+%sum1
 sum1=sum(data(s1:s2,:));
 sum1=sum1(1,3);
 sum2=0;
-%sum2为分割区间还未开始相加药品的数量
 for i=s1:s2
     sum2=sum2+data(i,3);
     if sum2/sum1>=0.5
