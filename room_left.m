@@ -1,6 +1,4 @@
 function N=room_left(data,A)
-%A：储药槽种类，行向量
-%data：输入的数据，第一列为药品所需储药槽最小宽度，第二列为药品所需个数
 N=0;
 n=length(A);
 k=1;
